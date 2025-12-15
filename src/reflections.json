@@ -1,0 +1,130 @@
+{
+    "M": {
+        "nombre": "Misterio Individual",
+        "header": "Misterio Individual",
+        "reflexiones": [
+            "En este misterio, meditamos sobre la importancia de la oración constante y la devoción a María. Que cada Ave María nos acerque más al corazón de Jesús.",
+            "El rosario es un arma poderosa contra el mal. Al rezar este misterio, pedimos la intercesión de la Virgen María para fortalecer nuestra fe y protegernos de las tentaciones."
+        ]
+    },
+    "M1": {
+        "nombre": "La Anunciación",
+        "header": "1er Misterio Gozoso",
+        "reflexiones": [
+            "El ángel Gabriel anuncia a María que será la madre de Jesús. Su humilde 'Hágase en mí según tu palabra' nos enseña la obediencia perfecta a la voluntad de Dios.",
+            "María acepta con fe el plan de Dios, aunque no comprende completamente. Pidamos la gracia de confiar en Dios incluso cuando no entendemos sus caminos."
+        ]
+    },
+    "M2": {
+        "nombre": "La Visitación",
+        "header": "2do Misterio Gozoso",
+        "reflexiones": [
+            "María visita a su prima Isabel, llevando a Jesús en su vientre. Su caridad nos inspira a servir a los demás con amor y generosidad.",
+            "Isabel reconoce la presencia de Jesús y proclama: '¿De dónde a mí que la madre de mi Señor venga a verme?' Que sepamos reconocer a Cristo en nuestros hermanos."
+        ]
+    },
+    "M3": {
+        "nombre": "El Nacimiento de Jesús",
+        "header": "3er Misterio Gozoso",
+        "reflexiones": [
+            "Jesús nace en la pobreza de un pesebre, mostrándonos que Dios se hace pequeño por amor. Contemplemos la humildad del Rey del universo.",
+            "Los ángeles anuncian: 'Gloria a Dios en las alturas y paz en la tierra a los hombres de buena voluntad.' Que el nacimiento de Cristo traiga paz a nuestros corazones."
+        ]
+    },
+    "M4": {
+        "nombre": "La Presentación de Jesús en el Templo",
+        "header": "4to Misterio Gozoso",
+        "reflexiones": [
+            "María y José presentan a Jesús en el templo, cumpliendo la ley. Simeón profetiza que una espada atravesará el corazón de María. Preparémonos para aceptar el sufrimiento con fe.",
+            "Simeón reconoce en Jesús la salvación de Dios. Pidamos la gracia de reconocer a Cristo en nuestra vida diaria y proclamarlo con alegría."
+        ]
+    },
+    "M5": {
+        "nombre": "El Niño Jesús Perdido y Hallado en el Templo",
+        "header": "5to Misterio Gozoso",
+        "reflexiones": [
+            "María y José buscan angustiados a Jesús durante tres días. Cuando lo encuentran, Él está en la casa de su Padre. Que siempre busquemos a Jesús cuando lo hayamos perdido por el pecado.",
+            "Jesús responde: '¿No sabían que debo ocuparme de los asuntos de mi Padre?' Aprendamos a poner a Dios en el primer lugar de nuestra vida."
+        ]
+    },
+    "M6": {
+        "nombre": "La Oración de Jesús en el Huerto",
+        "header": "1er Misterio Doloroso",
+        "reflexiones": [
+            "Jesús ora con angustia en Getsemaní, sabiendo el sufrimiento que le espera. Su 'No se haga mi voluntad, sino la tuya' nos enseña la entrega total a Dios.",
+            "Mientras Jesús sufre, los apóstoles duermen. Acompañemos a Jesús en su agonía con nuestra oración y vigilia, especialmente en la adoración eucarística."
+        ]
+    },
+    "M7": {
+        "nombre": "La Flagelación de Jesús",
+        "header": "2do Misterio Doloroso",
+        "reflexiones": [
+            "Jesús es atado a una columna y azotado cruelmente. Cada latigazo es por nuestros pecados. Pidamos perdón por nuestras ofensas y la gracia de no pecar más.",
+            "En su pasión, Jesús carga con nuestras culpas y nos obtiene la sanación. 'Por sus llagas hemos sido curados.' Agradezcamos su inmenso amor."
+        ]
+    },
+    "M8": {
+        "nombre": "La Coronación de Espinas",
+        "header": "3er Misterio Doloroso",
+        "reflexiones": [
+            "Los soldados coronan a Jesús con espinas y se burlan de Él como rey. El Rey del universo acepta la humillación por amor a nosotros. Reparemos sus ultrajes con nuestra adoración.",
+            "Jesús es coronado con espinas mientras nosotros aspiramos a la corona de gloria eterna. Que aceptemos nuestros sufrimientos unidos a los de Cristo."
+        ]
+    },
+    "M9": {
+        "nombre": "Jesús Carga con la Cruz",
+        "header": "4to Misterio Doloroso",
+        "reflexiones": [
+            "Jesús carga la pesada cruz hacia el Calvario. Cada paso es un acto de amor por nuestra salvación. Tomemos nuestra cruz diaria y sigamos a Cristo.",
+            "Simón de Cirene ayuda a Jesús a llevar la cruz. Seamos como Simón, dispuestos a ayudar a nuestros hermanos en sus cargas y sufrimientos."
+        ]
+    },
+    "M10": {
+        "nombre": "La Crucifixión y Muerte de Jesús",
+        "header": "5to Misterio Doloroso",
+        "reflexiones": [
+            "Jesús muere en la cruz por nuestros pecados. Sus últimas palabras 'Todo está cumplido' sellan nuestra redención. Contemplemos el amor infinito de Dios manifestado en la cruz.",
+            "Desde la cruz, Jesús nos da a María como madre: 'Mujer, ahí tienes a tu hijo.' Acojamos a María en nuestra vida como Juan la acogió en la suya."
+        ]
+    },
+    "M11": {
+        "nombre": "La Resurrección de Jesús",
+        "header": "1er Misterio Glorioso",
+        "reflexiones": [
+            "Cristo ha resucitado, venciendo la muerte y el pecado. Su resurrección es nuestra esperanza de vida eterna. Aleluya, el Señor ha resucitado verdaderamente.",
+            "Las mujeres encuentran el sepulcro vacío y el ángel anuncia: 'No está aquí, ha resucitado.' Que nuestra fe en Cristo resucitado transforme nuestra vida."
+        ]
+    },
+    "M12": {
+        "nombre": "La Ascensión de Jesús al Cielo",
+        "header": "2do Misterio Glorioso",
+        "reflexiones": [
+            "Jesús asciende al cielo ante los ojos de sus discípulos. Nos prepara un lugar en la casa del Padre. Vivamos con la mirada puesta en el cielo, nuestra verdadera patria.",
+            "Antes de ascender, Jesús promete: 'Estaré con ustedes todos los días hasta el fin del mundo.' Confiemos en su presencia constante en nuestra vida."
+        ]
+    },
+    "M13": {
+        "nombre": "La Venida del Espíritu Santo",
+        "header": "3er Misterio Glorioso",
+        "reflexiones": [
+            "El Espíritu Santo desciende sobre María y los apóstoles en Pentecostés. Reciben fortaleza y sabiduría para proclamar el Evangelio. Invoquemos al Espíritu Santo en nuestra vida.",
+            "El Espíritu Santo transforma a los apóstoles de temerosos en valientes testigos de Cristo. Pidamos la gracia de ser testigos audaces de nuestra fe."
+        ]
+    },
+    "M14": {
+        "nombre": "La Asunción de María",
+        "header": "4to Misterio Glorioso",
+        "reflexiones": [
+            "María es asunta al cielo en cuerpo y alma. Dios glorifica a quien fue fiel hasta el final. Que el ejemplo de María nos anime a perseverar en la santidad.",
+            "María, preservada del pecado, no conoce la corrupción del sepulcro. Es primicia de nuestra propia resurrección. Esperemos con fe nuestra glorificación futura."
+        ]
+    },
+    "M15": {
+        "nombre": "La Coronación de María como Reina del Cielo",
+        "header": "5to Misterio Glorioso",
+        "reflexiones": [
+            "María es coronada Reina del cielo y de la tierra. Desde su trono intercede por nosotros ante su Hijo. Acudamos a ella con confianza en todas nuestras necesidades.",
+            "María reina con Cristo en la gloria eterna. Ella es nuestra Madre y Reina. Consagrémonos a su Inmaculado Corazón y pongamos nuestra vida bajo su protección maternal."
+        ]
+    }
+}

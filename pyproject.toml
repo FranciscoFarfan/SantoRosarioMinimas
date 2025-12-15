@@ -1,0 +1,22 @@
+[project]
+name = "santorosario"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "Camel", email = "ffarfanvazquez@gmail.com" }
+]
+dependencies = [
+  "flet",
+  "flet_audio"
+]
+
+[tool.flet]
+org = "ffarfanvazquez"
+product = "santorosario"
+company = "ffarfanvazquez"
+copyright = "Copyright (C) 2025 by ffarfanvazquez"
+
+[tool.flet.app]
+path = "src"
