@@ -54,18 +54,18 @@ flutter_launcher_icons:
 flutter_native_splash:
   android: true
   android_12:
-    image: images/icon.gif
-    image_dark: images/icon.gif
+    image: images/icon.png
+    image_dark: images/icon.png
   color: '#ffffff'
   color_dark: '#222222'
-  image: images/icon.gif
-  image_android: images/icon.gif
-  image_dark: images/icon.gif
-  image_dark_android: images/icon.gif
-  image_dark_ios: images/icon.gif
-  image_dark_web: images/icon.gif
-  image_ios: images/icon.gif
-  image_web: images/icon.gif
+  image: images/icon.png
+  image_android: images/icon.png
+  image_dark: images/icon.png
+  image_dark_android: images/icon.png
+  image_dark_ios: images/icon.png
+  image_dark_web: images/icon.png
+  image_ios: images/icon.png
+  image_web: images/icon.png
   ios: true
   web: true
 name: santorosario

@@ -36,5 +36,5 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
     version='C:\\Users\\camel\\AppData\\Local\\Temp\\7b07c131-04ff-45a4-9254-7189de79ec76',
-    icon=['assets\\Rosario2.ico'],
+    icon=['assets\\icon.ico'],
 )

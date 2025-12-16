@@ -20,8 +20,8 @@ class RosarioApp:
         self.base_path = Path(__file__).parent
         # For Flet assets, use relative paths from the assets directory
         # Do not use absolute paths for src properties
-        self.audio_path = "Audios"
-        self.image_path = "Caratulas"
+        self.audio_path = "/Audios"
+        self.image_path = "/Caratulas"
         
         # Load reflections
         with open(self.base_path / "reflections.json", "r", encoding="utf-8") as f:
@@ -97,7 +97,7 @@ class RosarioApp:
             controls=[
                 ft.Text("Santo Rosario", size=32, weight=ft.FontWeight.BOLD, color=ft.Colors.WHITE),
                 ft.Image(
-                    src="Fatima.jpg",
+                    src="./Fatima.jpg",
                     width=200,
                     height=200,
                     fit=ft.ImageFit.COVER,
@@ -183,10 +183,9 @@ class RosarioApp:
                 ft.IconButton(
                     icon=ft.Icons.INFO_OUTLINE,
                     icon_color=ft.Colors.WHITE,
-                    on_click=lambda _: self.page.launch_url("https://franciscofarfan.github.io/Rosario.html"),
+                    on_click=lambda _: self.page.launch_url("https://franciscofarfan.github.io/FSSPX/Rosario/Rosario.html"),
                     tooltip="Acerca de",
                 ),
-                ft.ElevatedButton("DEBUG FILES", on_click=self.show_debug_dialog, bgcolor=ft.Colors.RED),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             spacing=20,
@@ -335,7 +334,7 @@ class RosarioApp:
         self.layout = ft.Stack(
             controls=[
                 ft.Image(
-                    src="cielo.jpg",
+                    src="./cielo.jpg",
                     fit=ft.ImageFit.FIT_WIDTH,
                     opacity=1.0,
                     left=0,
@@ -686,5 +685,4 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    assets_dir = str(Path(__file__).parent / "assets")
-    ft.app(target=main, assets_dir=assets_dir)
+    ft.app(target=main, assets_dir="assets")
