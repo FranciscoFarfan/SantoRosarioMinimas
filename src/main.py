@@ -1,10 +1,12 @@
 import flet as ft
-from flet_audio import Audio
+
 import json
 import random
 from datetime import datetime
 from pathlib import Path
 
+
+import os
 
 class RosarioApp:
     def __init__(self, page: ft.Page):
@@ -12,15 +14,14 @@ class RosarioApp:
         self.page.title = "Santo Rosario"
         self.page.theme_mode = ft.ThemeMode.LIGHT
         self.page.theme = ft.Theme(color_scheme_seed=ft.Colors.CYAN)
-        self.page.title = "Santo Rosario"
-        self.page.theme_mode = ft.ThemeMode.LIGHT
-        self.page.theme = ft.Theme(color_scheme_seed=ft.Colors.CYAN)
         self.page.padding = 0
         
         # Paths
         self.base_path = Path(__file__).parent
-        self.audio_path = self.base_path / "assets" / "Audios"
-        self.image_path = self.base_path / "assets" / "Caratulas"
+        # For Flet assets, use relative paths from the assets directory
+        # Do not use absolute paths for src properties
+        self.audio_path = "Audios"
+        self.image_path = "Caratulas"
         
         # Load reflections
         with open(self.base_path / "reflections.json", "r", encoding="utf-8") as f:
@@ -36,7 +37,9 @@ class RosarioApp:
         self.include_cantos = False
         self.current_duration = 0
         self.current_position = 0
+        self.current_position = 0
         self.is_seeking = False
+        self.playback_speed = 1.0
         
         # UI Components
         self.setup_ui()
@@ -46,14 +49,46 @@ class RosarioApp:
         if self.audio in self.page.overlay:
             self.page.overlay.remove(self.audio)
         
-        self.audio = Audio(
+        self.audio = ft.Audio(
             autoplay=False,
             on_state_changed=self.on_audio_state_changed,
             on_position_changed=self.on_position_changed,
             on_duration_changed=self.on_duration_changed,
+            playback_rate=self.playback_speed,
         )
         self.page.overlay.append(self.audio)
         self.page.update()
+
+    def list_files(self, startpath):
+        text_out = ""
+        for root, dirs, files in os.walk(startpath):
+            level = root.replace(startpath, '').count(os.sep)
+            indent = ' ' * 4 * (level)
+            text_out += '{}{}/\n'.format(indent, os.path.basename(root))
+            subindent = ' ' * 4 * (level + 1)
+            for f in files:
+                text_out += '{}{}\n'.format(subindent, f)
+        return text_out
+
+    def show_debug_dialog(self, e):
+        files_str = self.list_files(str(self.base_path))
+        
+        dlg = ft.AlertDialog(
+            title=ft.Text("Debug Files"),
+            content=ft.Column([
+                ft.Text("Base Path: " + str(self.base_path)),
+                ft.Text("Assets Dir: " + str(Path(__file__).parent / "assets")),
+                ft.Container(
+                    content=ft.Text(files_str, size=10, font_family="monospace"),
+                    height=300,
+                    width=300,
+                )
+            ], scroll=ft.ScrollMode.AUTO, height=400),
+            actions=[
+                ft.TextButton("Close", on_click=lambda x: self.page.close(dlg))
+            ],
+        )
+        self.page.open(dlg)
 
     def setup_ui(self):
         """Setup the main UI"""
@@ -151,6 +186,7 @@ class RosarioApp:
                     on_click=lambda _: self.page.launch_url("https://franciscofarfan.github.io/Rosario.html"),
                     tooltip="Acerca de",
                 ),
+                ft.ElevatedButton("DEBUG FILES", on_click=self.show_debug_dialog, bgcolor=ft.Colors.RED),
             ],
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             spacing=20,
@@ -188,6 +224,28 @@ class RosarioApp:
         )
         
         self.time_text = ft.Text("0:00 / 0:00", size=12)
+
+        self.speed_dropdown = ft.Dropdown(
+            width=100,
+            value="1.0x",
+            options=[
+                ft.dropdown.Option("0.85x"),
+                ft.dropdown.Option("0.90x"),
+                ft.dropdown.Option("0.95x"),
+                ft.dropdown.Option("1.0x"),
+                ft.dropdown.Option("1.1"),
+                ft.dropdown.Option("1.2x"),
+                ft.dropdown.Option("1.3x"),
+                ft.dropdown.Option("1.4x"),
+                ft.dropdown.Option("1.5x"),
+            ],
+            on_change=self.change_playback_speed,
+            text_size=12,
+            content_padding=5,
+            filled=True,
+            bgcolor=ft.Colors.GREY_100,
+            border_radius=10,
+        )
         
         self.player_view = ft.Column(
             controls=[
@@ -225,7 +283,15 @@ class RosarioApp:
                                 spacing=5,
                             ),
                             self.position_slider,
-                            self.time_text,
+                            ft.Row(
+                                controls=[
+                                    self.time_text,
+                                    ft.Container(expand=True),
+                                    ft.Text("Velocidad:", size=12, weight=ft.FontWeight.BOLD),
+                                    self.speed_dropdown,
+                                ],
+                                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                            ),
                             ft.Row(
                                 controls=[
                                     ft.IconButton(
@@ -294,26 +360,6 @@ class RosarioApp:
         # Add to page
         self.page.add(self.layout)
 
-    # Need to update show_player/back_to_menu to toggle Containers instead of Columns directly if using Stack
-    # OR simpler: The stack has one main content container that swaps content.
-    
-    # Revised approach: 
-    # self.main_container = ft.Container(...) 
-    # self.main_container.content = self.main_menu
-    
-    # Let's adjust strict replacement for lines 49-171 logic.
-    # The previous code had "self.page.add(self.main_menu, self.player_view)".
-    # I replaced it with "self.page.add(self.layout)".
-    # But I need to update show_player and back_to_menu methods to work with layout.
-    
-    # Wait, if I change the structure to Stack -> Container -> Column,
-    # then updating main_menu.visible = False/True still works IF main_menu is in the tree.
-    # But in my Stack above I put main_menu in one Container and player_view in another.
-    # So I need to save references to those Containers to toggle them.
-    # self.menu_container = ...
-    # self.player_container = ...
-    
-    # Let me rewrite the replacement content to include those container definitions.
     
     def create_roadmap_item(self, label, tag):
         """Create a roadmap item container"""
@@ -327,13 +373,7 @@ class RosarioApp:
 
     def update_roadmap(self, current_type):
         """Update the roadmap highlights"""
-        # The roadmap row is at index 4 inside the Column of the player container
-        # Column controls: [Album Art, Header, Title, Reflection, Roadmap, Slider, Time, Controls]
-        # BUT I changed structure above. 
-        # Player View is now: [BackButton, Container(Column([Art, Header, Title, Reflection, Roadmap...]))]
-        # So I need to find the roadmap using proper indexing.
-        
-        # Access the main column inside the card container
+      
         player_content_col = self.player_view.controls[1].content
         roadmap_row = player_content_col.controls[4]
         
@@ -496,15 +536,28 @@ class RosarioApp:
         if 0 <= index < len(self.playlist):
             track = self.playlist[index]
             
-            # Update audio source and enable autoplay
-            audio_file = self.audio_path / track["audio"]
-            self.audio.src = str(audio_file)
-            self.audio.autoplay = True
-            self.audio.update()
+            # Re-initialize audio to ensure settings like playback_speed are applied correctly
+            # Remove existing audio from overlay if present
+            if self.audio and self.audio in self.page.overlay:
+                self.page.overlay.remove(self.audio)
+                self.audio.release()
+            
+            # Create new audio instance for the track
+            audio_file = f"{self.audio_path}/{track['audio']}"
+            self.audio = ft.Audio(
+                src=audio_file,
+                autoplay=True,
+                playback_rate=self.playback_speed,
+                on_state_changed=self.on_audio_state_changed,
+                on_position_changed=self.on_position_changed,
+                on_duration_changed=self.on_duration_changed,
+            )
+            self.page.overlay.append(self.audio)
+            self.page.update()
             
             # Update UI
-            image_file = self.image_path / track["image"]
-            self.album_art.src = str(image_file)
+            image_file = f"{self.image_path}/{track['image']}"
+            self.album_art.src = image_file
             self.track_header.value = track.get("header", "")
             self.track_title.value = track["title"]
             self.reflection_text.value = track["reflection"]
@@ -613,6 +666,18 @@ class RosarioApp:
         seconds = seconds % 60
         return f"{minutes}:{seconds:02d}"
     
+    def change_playback_speed(self, e):
+        """Change the playback speed"""
+        speed_str = e.control.value.replace("x", "")
+        try:
+            new_speed = float(speed_str)
+            self.playback_speed = new_speed
+            if self.audio:
+                self.audio.playback_rate = new_speed
+                self.audio.update()
+        except ValueError:
+            pass
+    
 
 
 
@@ -621,4 +686,5 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(target=main, assets_dir="assets")
+    assets_dir = str(Path(__file__).parent / "assets")
+    ft.app(target=main, assets_dir=assets_dir)

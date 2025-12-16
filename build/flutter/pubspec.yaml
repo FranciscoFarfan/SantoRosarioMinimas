@@ -34,38 +34,38 @@ flutter:
   uses-material-design: true
 flutter_launcher_icons:
   adaptive_icon_background: '#ffffff'
-  adaptive_icon_foreground: images/icon.png
+  adaptive_icon_foreground: images/icon.gif
   android: true
-  image_path: images/icon.png
-  image_path_android: images/icon.png
-  image_path_ios: images/icon.png
+  image_path: images/icon.gif
+  image_path_android: images/icon.gif
+  image_path_ios: images/icon.gif
   ios: true
   macos:
     generate: true
-    image_path: images/icon.png
+    image_path: images/icon.gif
   remove_alpha_ios: true
   web:
     generate: true
-    image_path: images/icon.png
+    image_path: images/icon.gif
   windows:
     generate: true
     icon_size: 256
-    image_path: images/icon.png
+    image_path: images/icon.gif
 flutter_native_splash:
   android: true
   android_12:
-    image: images/icon.png
-    image_dark: images/icon.png
+    image: images/icon.gif
+    image_dark: images/icon.gif
   color: '#ffffff'
   color_dark: '#222222'
-  image: images/icon.png
-  image_android: images/icon.png
-  image_dark: images/icon.png
-  image_dark_android: images/icon.png
-  image_dark_ios: images/icon.png
-  image_dark_web: images/icon.png
-  image_ios: images/icon.png
-  image_web: images/icon.png
+  image: images/icon.gif
+  image_android: images/icon.gif
+  image_dark: images/icon.gif
+  image_dark_android: images/icon.gif
+  image_dark_ios: images/icon.gif
+  image_dark_web: images/icon.gif
+  image_ios: images/icon.gif
+  image_web: images/icon.gif
   ios: true
   web: true
 name: santorosario

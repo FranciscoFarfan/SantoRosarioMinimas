@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "ffarfanvazquez" "\0"
-            VALUE "FileDescription", "santorosario" "\0"
+            VALUE "FileDescription", "Santo Rosario" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "santorosario" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 by ffarfanvazquez" "\0"
             VALUE "OriginalFilename", "santorosario.exe" "\0"
-            VALUE "ProductName", "santorosario" "\0"
+            VALUE "ProductName", "Santo Rosario" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

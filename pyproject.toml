@@ -1,6 +1,6 @@
 [project]
 name = "santorosario"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 readme = "README.md"
 requires-python = ">=3.12"
@@ -14,9 +14,12 @@ dependencies = [
 
 [tool.flet]
 org = "ffarfanvazquez"
-product = "santorosario"
+product = "Santo Rosario"
 company = "ffarfanvazquez"
 copyright = "Copyright (C) 2025 by ffarfanvazquez"
 
 [tool.flet.app]
 path = "src"
+
+[tool.flet.android]
+min_sdk_version = 21

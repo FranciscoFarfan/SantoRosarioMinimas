@@ -1,0 +1,10 @@
+build/.hash
+build/aab
+build/apk
+build/flutter/
+build/flutter-packages/
+build/site-packages/
+src/build/
+src/__pycache__
+src/dist/
+src/storage/

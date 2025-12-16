@@ -54,13 +54,13 @@ android {
 
     defaultConfig {        
         applicationId "ffarfanvazquez.santorosario"
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
 
         println("Gradle build config:")
-        println("  minSdkVersion: $flutter.minSdkVersion")
+        println("  minSdkVersion: 21")
         println("  targetSdkVersion: $flutter.targetSdkVersion")
         println("  versionCode: $flutter.versionCode")
         println("  versionName: $flutter.versionName")

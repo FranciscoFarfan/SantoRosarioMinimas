@@ -1,4 +1,4 @@
-# santorosario
+# Santo Rosario
 
 
 
@@ -6,7 +6,7 @@
 
 * `santorosario` - project name - lowercase, no spaces, i.e. "snake_case" identifier - used as a package name, iOS/macOS/Android bundle name and Windows/Linux executable file name.
 * `` - project description.
-* `santorosario` - project display name that is shown in window titles and about app dialogs.
+* `Santo Rosario` - project display name that is shown in window titles and about app dialogs.
 * `ffarfanvazquez` - org name in reverse domain name notation, e.g. `com.mycompany.myproject`.
 * `ffarfanvazquez` - the name of the company.
 * `Copyright (C) 2025 by ffarfanvazquez` - the name of the company.
