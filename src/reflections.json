@@ -2,129 +2,257 @@
     "M": {
         "nombre": "Misterio Individual",
         "header": "Misterio Individual",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "En este misterio, meditamos sobre la importancia de la oración constante y la devoción a María. Que cada Ave María nos acerque más al corazón de Jesús.",
-            "El rosario es un arma poderosa contra el mal. Al rezar este misterio, pedimos la intercesión de la Virgen María para fortalecer nuestra fe y protegernos de las tentaciones."
+            "El rosario is un arma poderosa contra el mal. Al rezar este misterio, pedimos la intercesión de la Virgen María para fortalecer nuestra fe y protegernos de las tentaciones."
+        ],
+        "reflexiones_profundas": [
+            "El Rosario ha sido llamado, desde antiguo, el Salterio de la Virgen, porque sus ciento cincuenta Avemarías corresponden a los ciento cincuenta salmos de David. Cada cuenta que pasa entre los dedos es un eslabón de esa dulce cadena que, según la tradición, ata el cielo con la tierra y nos sostiene cuando el alma flaquea.",
+            "En el rezo del Rosario se unen la oración vocal y la contemplación silenciosa, como enseñaron los antiguos monjes: los labios repiten palabras conocidas mientras el alma, libre de esfuerzo, se adentra en los misterios de la vida de Cristo. Que nuestra repetición nunca sea vacía, sino la de un niño que no se cansa de decir 'te amo' a su Madre.",
+            "La Santa Iglesia ha enriquecido esta oración con innumerables indulgencias, recordándonos que el Rosario, rezado con devoción, alivia también a las almas del Purgatorio. Ofrezcamos hoy nuestras decenas también por ellas, que ya no pueden orar por sí mismas.",
+            "No conozco mejor secreto para saber si un alma pertenece a Dios que preguntarle si ama rezar el Avemaría y el Rosario. Que esta devoción sencilla sea también la nuestra, pues en ella se esconde la grandeza de los humildes — San Luis María de Montfort",
+            "Entre todos los homenajes que se rinden a la Madre de Dios, no conozco ninguno más agradable a su corazón que el Santo Rosario, pues en él se honra a la vez a Jesús y a María — San Alfonso María de Ligorio",
+            "El Rosario es, de todas las oraciones, la más bella, la más rica en gracias, la que más agrada a la Santísima Virgen. Que nunca falte una decena en nuestro día, por ocupado que este sea — San Pío X"
         ]
     },
     "M1": {
         "nombre": "La Anunciación",
         "header": "1er Misterio Gozoso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "El ángel Gabriel anuncia a María que será la madre de Jesús. Su humilde 'Hágase en mí según tu palabra' nos enseña la obediencia perfecta a la voluntad de Dios.",
             "María acepta con fe el plan de Dios, aunque no comprende completamente. Pidamos la gracia de confiar en Dios incluso cuando no entendemos sus caminos."
+        ],
+        "reflexiones_profundas": [
+            "El ángel entra en el silencio de Nazaret sin anunciarse con trompetas, y en ese instante el Verbo eterno se hace carne en el seno purísimo de María. La liturgia nos hace doblar la rodilla al pronunciar 'Et incarnatus est', porque en ese segundo el Cielo bajó a la tierra.",
+            "Ave, llena de gracia. En este saludo la Iglesia ha visto el reverso de la caída de Eva: donde una mujer trajo la desobediencia, otra Mujer trae, con su 'sí', la salvación del mundo. Contemplemos a María como la nueva Eva, madre de todos los vivientes en la gracia.",
+            "Tres veces al día, desde hace siglos, la campana del Ángelus invita a los fieles a detenerse y recordar este misterio. Que también nosotros sepamos interrumpir nuestras ocupaciones para inclinarnos, aunque sea un instante, ante el momento en que Dios se hizo hombre.",
+            "Toda la creación esperaba en silencio tu respuesta, oh Virgen: en tus manos está el precio de nuestra salvación; si tú consientes, quedaremos libres. El mundo entero, postrado a tus rodillas, aguarda esa palabra — San Bernardo de Claraval",
+            "María no preguntó por qué, sino cómo; no exigió comprenderlo todo, sino que se entregó entera a la voluntad divina. Ese abandono confiado, sin reservas, es el modelo de toda alma que quiere pertenecer a Jesús por María — San Luis María de Montfort",
+            "La Virgen no se turbó por el temor, sino por la humildad de verse alabada; y aun así no rehusó la voluntad de Dios, sino que la abrazó con dulzura. Aprendamos de ella a decir nuestro 'sí' sin ruido y sin resistencia — San Francisco de Sales"
         ]
     },
     "M2": {
         "nombre": "La Visitación",
         "header": "2do Misterio Gozoso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "María visita a su prima Isabel, llevando a Jesús en su vientre. Su caridad nos inspira a servir a los demás con amor y generosidad.",
             "Isabel reconoce la presencia de Jesús y proclama: '¿De dónde a mí que la madre de mi Señor venga a verme?' Que sepamos reconocer a Cristo en nuestros hermanos."
+        ],
+        "reflexiones_profundas": [
+            "'Se puso María en camino y fue con prontitud'; así narra el Evangelio la prisa de la Virgen por servir a su prima anciana. No fue una prisa ansiosa, sino la urgencia serena del amor que no sabe esperar cuando hay un hermano necesitado.",
+            "En el vientre de Isabel, Juan salta de alegría al reconocer, aún sin palabras, la presencia del Salvador. Pidamos esa misma sensibilidad del alma para reconocer a Cristo, aunque venga escondido, en cada persona que se cruza en nuestro camino.",
+            "María responde a la bendición de Isabel con el Magníficat, canto que la Iglesia repite cada tarde en Vísperas desde hace veinte siglos. Que nuestra alma también engrandezca al Señor, no solo con palabras, sino con una vida entregada al servicio.",
+            "Fundé la Orden de la Visitación pensando precisamente en este misterio: en la caridad sencilla y cotidiana que no busca grandes hazañas, sino visitar, servir y consolar a quien lo necesita, como hizo María con su prima — San Francisco de Sales",
+            "Se fijó el Señor en la pequeñez de su esclava, y por eso María pudo llevar a Jesús a casa de Isabel sin más mérito que su humildad. Yo también quiero ser pequeña, para que Jesús se sirva de mí — Santa Teresita del Niño Jesús",
+            "Nuestro Señor no busca tanto la grandeza de nuestras obras cuanto el amor con que las hacemos: María cruzó las montañas de Judea no para ser vista, sino para servir en silencio — Santa Teresa de Jesús"
         ]
     },
     "M3": {
         "nombre": "El Nacimiento de Jesús",
         "header": "3er Misterio Gozoso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "Jesús nace en la pobreza de un pesebre, mostrándonos que Dios se hace pequeño por amor. Contemplemos la humildad del Rey del universo.",
             "Los ángeles anuncian: 'Gloria a Dios en las alturas y paz en la tierra a los hombres de buena voluntad.' Que el nacimiento de Cristo traiga paz a nuestros corazones."
+        ],
+        "reflexiones_profundas": [
+            "'Un niño nos ha nacido, un hijo se nos ha dado', proclama la liturgia de la Misa de Medianoche con las palabras del profeta Isaías. En un pesebre de Belén se cumplen siglos de espera; contemplemos con los pastores el misterio de un Dios que se hace niño.",
+            "La tradición llama a este misterio el 'admirable intercambio': Dios se hace hombre para que el hombre pueda un día participar de la vida de Dios. Que la pobreza del pesebre nos enseñe a desprendernos de lo superfluo para acoger lo verdaderamente valioso.",
+            "En la noche silenciosa de Belén, solo los pastores y unos pocos fieles reconoen al Rey recién nacido. Pidamos la gracia de no pasar de largo ante Cristo cuando se presenta escondido en la sencillez de cada día.",
+            "Para contemplar con ternura el nacimiento de Jesús debemos pedir al Señor una fe viva, porque quien entra sin fe en la gruta de Belén no hallará más que un niño pobre, sin advertir que es Dios mismo quien tiembla de frío por nuestro amor — San Alfonso María de Ligorio",
+            "Quise representar con figuras vivas el pesebre de Belén, para que los ojos del cuerpo vieran las incomodidades en que nació el Niño, recostado en el heno entre el buey y la mula. Que la pobreza de Dios encendido en un establo nos enseñe la verdadera alegría — San Francisco de Asís",
+            "Yo soy pequeña Teresa del Niño Jesús, y en Él aprendí que no hace falta ser grande para amar mucho: Dios mismo quiso nacer pequeño y necesitado de todo, para enseñarnos que la santidad cabe en las cosas humildes de cada día — Santa Teresita del Niño Jesús"
         ]
     },
     "M4": {
         "nombre": "La Presentación de Jesús en el Templo",
         "header": "4to Misterio Gozoso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "María y José presentan a Jesús en el templo, cumpliendo la ley. Simeón profetiza que una espada atravesará el corazón de María. Preparémonos para aceptar el sufrimiento con fe.",
             "Simeón reconoce en Jesús la salvación de Dios. Pidamos la gracia de reconocer a Cristo en nuestra vida diaria y proclamarlo con alegría."
+        ],
+        "reflexiones_profundas": [
+            "Cuarenta días después de nacer, María y José llevan a Jesús al Templo, no porque la Ley obligara a Dios, sino porque el Hijo quiso someterse a ella por amor a nosotros. La fiesta de la Candelaria, con sus velas encendidas, nos recuerda que Cristo es 'luz para alumbrar a las naciones'",
+            "Simeón toma al Niño en sus brazos y canta el Nunc dimittis, oración que la Iglesia reza cada noche en Completas. Que también nosotros sepamos reconocer, al final de cada jornada, que hemos visto la salvación en algún gesto sencillo del día.",
+            "Ana la profetisa, ya anciana, reconoce al Mesías después de años de oración y ayuno en el Templo. Su fidelidad silenciosa nos enseña que la constancia en la oración, aunque parezca no dar fruto, prepara el corazón para reconocer a Dios cuando llega.",
+            "Cristo, aun siendo Legislador, no vino a abolir la Ley sino a cumplirla; se sometió a la purificación no porque la necesitara, sino para enseñarnos la virtud de la obediencia humilde a lo que Dios dispone, aun cuando no comprendamos del todo su porqué — Santo Tomás de Aquino",
+            "Cuánto me conmueve pensar que el mismo Dios que hoy habita escondido en el tabernáculo quiso, siendo niño, ser llevado en brazos al Templo para ser ofrecido al Padre. Que cada visita nuestra al Santísimo Sacramento sea también una pequeña presentación de nosotros mismos — San Juan María Vianney",
+            "Una espada de dolor atravesará tu alma, oh Madre, desde el mismo día en que ofreciste a tu Hijo en el Templo; y sin embargo no retrocediste, sino que lo entregaste con las manos abiertas — San Bernardo de Claraval"
         ]
     },
     "M5": {
         "nombre": "El Niño Jesús Perdido y Hallado en el Templo",
         "header": "5to Misterio Gozoso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "María y José buscan angustiados a Jesús durante tres días. Cuando lo encuentran, Él está en la casa de su Padre. Que siempre busquemos a Jesús cuando lo hayamos perdido por el pecado.",
             "Jesús responde: '¿No sabían que debo ocuparme de los asuntos de mi Padre?' Aprendamos a poner a Dios en el primer lugar de nuestra vida."
+        ],
+        "reflexiones_profundas": [
+            "Tres días busca María angustiada a su Hijo, los mismos tres días que después pasará buscándolo en el sepulcro. Ya desde la infancia de Jesús la Cruz proyecta su sombra; aprendamos a no desesperar cuando, por un tiempo, sentimos a Dios ausente.",
+            "Este misterio cierra los Gozosos y abre, en silencio, los años ocultos de Nazaret, de los que el Evangelio apenas dice que 'crecía en sabiduría, en estatura y en gracia'. Que valoremos también los años callados y ordinarios de nuestra vida como tiempo de crecimiento espiritual.",
+            "La tradición cuenta este episodio como el segundo dolor de María: la pérdida del Niño Jesús. Unido a su alegría al hallarlo, este misterio nos enseña que en la vida cristiana el gozo y el dolor caminan siempre entrelazados.",
+            "¿No sabíais que debía ocuparme de las cosas de mi Padre? Estas palabras del Niño Jesús me enseñaron que, por pequeña que sea un alma, puede y debe buscar en todo la voluntad de Dios antes que cualquier otra cosa — Santa Teresita del Niño Jesús",
+            "La pérdida del Niño Jesús en el Templo fue para el Corazón de María una espada tan dolorosa como cualquiera de sus otros dolores, pues nada aflige tanto a quien ama como sentir ausente, aunque sea por poco tiempo, al ser amado — San Alfonso María de Ligorio",
+            "Desde muchacho sentí en el alma el deseo de estar en las cosas de Dios, como el Niño Jesús entre los doctores; por eso quise que cada joven encontrara, como Él, un lugar donde aprender y también donde enseñar lo que ha recibido — San Juan Bosco"
         ]
     },
     "M6": {
         "nombre": "La Oración de Jesús en el Huerto",
         "header": "1er Misterio Doloroso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "Jesús ora con angustia en Getsemaní, sabiendo el sufrimiento que le espera. Su 'No se haga mi voluntad, sino la tuya' nos enseña la entrega total a Dios.",
             "Mientras Jesús sufre, los apóstoles duermen. Acompañemos a Jesús en su agonía con nuestra oración y vigilia, especialmente en la adoración eucarística."
+        ],
+        "reflexiones_profundas": [
+            "El Evangelio de san Lucas anota que el sudor de Jesús se hizo \"como gotas de sangre que caían hasta el suelo\" (Lc 22,44). La liturgia del Jueves Santo nos invita a velar una hora con Él en la Adoración Nocturna, acompañando ese silencio cargado de angustia.",
+            "Tres veces Jesús encuentra dormidos a los discípulos a quienes pidió velar. \"Velad y orad, para que no caigáis en tentación\" (Mt 26,41) resuena todavía hoy como advertencia a nuestra propia flaqueza espiritual.",
+            "En este misterio se pronuncia la oración más perfecta jamás dicha por labios humanos: \"Padre, si es posible, pase de mí este cáliz; pero no se haga mi voluntad, sino la tuya\" (Mt 26,39). En ella se resume toda la vida cristiana.",
+            "Un alma que cree y piensa en la agonía del Huerto es imposible que no se enternezca de amor, viendo a un Dios que suda sangre por temor a nuestra condenación. Meditar cada día esta escena es el camino más seguro para no ofenderlo más — San Alfonso María de Ligorio",
+            "En esa hora oscura del Huerto, el alma de Jesús atravesó lo que yo he llamado la noche oscura: la angustia sin consuelo sensible, el silencio aparente del Padre. Quien pase por esa noche, únase a Cristo orante en Getsemaní, y no tema, porque también allí Dios está presente — San Juan de la Cruz",
+            "Jesús me mostró que aquella hora del Huerto fue de las más terribles de toda su Pasión, porque allí cargó con el peso de todos los pecados del mundo, incluidos los míos. Acompañémosle también nosotros con una hora de vela y de confianza en su Divina Misericordia — Santa Faustina Kowalska"
         ]
     },
     "M7": {
         "nombre": "La Flagelación de Jesús",
         "header": "2do Misterio Doloroso",
-        "reflexiones": [
-            "Jesús es atado a una columna y azotado cruelmente. Cada latigazo es por nuestros pecados. Pidamos perdón por nuestras ofensas y la gracia de no pecar más.",
-            "En su pasión, Jesús carga con nuestras culpas y nos obtiene la sanación. 'Por sus llagas hemos sido curados.' Agradezcamos su inmenso amor."
+        "reflexiones_sencillas": [
+            "En su pasión, Jesús carga con nuestras culpas y nos obtiene la sanación. 'Por sus llagas hemos sido curados.' Agradezcamos su inmenso amor.",
+            "Jesús es atado a una columna y azotado cruelmente. Cada latigazo es por nuestros pecados. Pidamos perdón por nuestras ofensas y la gracia de no pecar más."
+        ],
+        "reflexiones_profundas": [
+            "'Por sus llagas hemos sido curados' (Is 53,5): la liturgia del Viernes Santo pone en nuestros labios esta profecía de Isaías al contemplar la espalda de Jesús desgarrada por los azotes. Cada llaga es, según la piedad tradicional, un sacramento visible del precio de nuestro perdón.",
+            "La Iglesia ha custodiado durante siglos como reliquia la columna de la Flagelación en Jerusalén, signo de que este sufrimiento no fue un episodio más, sino un misterio digno de veneración perpetua. Contemplemos hoy esa columna con los ojos del alma.",
+            "La tradición cristiana ha visto en este misterio una llamada especial a la reparación y a la mortificación cristiana, no por desprecio del cuerpo, sino por amor a Aquel que entregó el suyo hasta la sangre.",
+            "Considera, alma mía, cómo Jesús fue atado a la columna y azotado sin piedad hasta desgarrar su carne inocente. Y sin embargo no abrió la boca para quejarse, sino que ofreció cada azote por tus pecados y los míos — San Alfonso María de Ligorio",
+            "Fue ante una imagen de Cristo muy llagado donde mi corazón, tan tibio hasta entonces, se sintió herido de dolor por haberle ofendido tanto. Desde aquel día no pude ya mirar la sangre de Cristo sin un propósito firme de enmienda — Santa Teresa de Jesús",
+            "Cuando contemplo el cuerpo de Cristo azotado, entiendo por qué he amado siempre la pobreza y el desprecio del mundo: quise, en mi propia carne, llevar algo de lo que Él llevó por mí — San Francisco de Asís"
         ]
     },
     "M8": {
         "nombre": "La Coronación de Espinas",
         "header": "3er Misterio Doloroso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "Los soldados coronan a Jesús con espinas y se burlan de Él como rey. El Rey del universo acepta la humillación por amor a nosotros. Reparemos sus ultrajes con nuestra adoración.",
             "Jesús es coronado con espinas mientras nosotros aspiramos a la corona de gloria eterna. Que aceptemos nuestros sufrimientos unidos a los de Cristo."
+        ],
+        "reflexiones_profundas": [
+            "'He aquí el hombre', dice Pilato al presentar a Jesús coronado de espinas y vestido de púrpura (Jn 19,5). Sin saberlo, el gobernador proclama ante el mundo la verdadera realeza de Aquel a quien los soldados creían burlar.",
+            "La corona de espinas, la caña como cetro y el manto de púrpura fueron pensados para el escarnio, pero la fe cristiana los ha convertido en símbolos de la única realeza verdadera: la que reina desde el sufrimiento y el amor entregado.",
+            "La piedad tradicional ha visto en esta corona una llamada a ofrecer reparación por los pecados de soberbia y de pensamiento, pues fue precisamente la cabeza de Cristo la que quiso ser traspasada por las espinas.",
+            "Mis pecados, más que la sentencia de Pilato, fueron los que coronaron de espinas la cabeza de mi Salvador. Que cada pensamiento de soberbia mío se convierta, de hoy en más, en un acto de amor reparador — San Alfonso María de Ligorio",
+            "Quise llevar también el nombre de la Santa Faz, ese rostro adorable cubierto de oprobio y coronado de espinas, para recordar siempre que la verdadera grandeza se esconde bajo el velo de la humillación — Santa Teresita del Niño Jesús",
+            "Pobre pecador, pensaba yo muchas veces en la corona de espinas y me decía: si el Rey del cielo aceptó ser coronado así por mí, ¿qué humillación podría yo rehusar por Él? — San Juan María Vianney"
         ]
     },
     "M9": {
         "nombre": "Jesús Carga con la Cruz",
         "header": "4to Misterio Doloroso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "Jesús carga la pesada cruz hacia el Calvario. Cada paso es un acto de amor por nuestra salvación. Tomemos nuestra cruz diaria y sigamos a Cristo.",
             "Simón de Cirene ayuda a Jesús a llevar la cruz. Seamos como Simón, dispuestos a ayudar a nuestros hermanos en sus cargas y sufrimientos."
+        ],
+        "reflexiones_profundas": [
+            "\"El que quiera venir en pos de mí, tome su cruz cada día y sígame\" (Lc 9,23): en este misterio Jesús no solo carga con un madero, sino que nos enseña el camino de todo discípulo. Llevemos también nosotros, sin quejarnos, la cruz que cada jornada nos trae.",
+            "Desde los primeros siglos, los peregrinos recorren en Jerusalén la Vía Dolorosa, el mismo camino de piedra que pisó Jesús hacia el Calvario. Al meditar este misterio, unámonos en espíritu a esa procesión que no ha cesado en dos mil años.",
+            "La tradición recuerda a las mujeres de Jerusalén que lloraban al ver pasar a Jesús, y a quienes Él pidió llorar antes por sus propios hijos. Que nuestro dolor ante la Cruz se traduzca también en conversión, y no solo en sentimiento.",
+            "Considera cómo Simón de Cirene fue obligado a ayudar a Jesús a llevar la cruz. Pide la gracia de no necesitar ser obligado tú, sino de ofrecerte espontáneamente a cargar con Cristo cualquier cruz que la vida te presente — San Alfonso María de Ligorio",
+            "Ante el crucifijo de San Damián escuché la voz de Cristo pedirme que reparase su Iglesia; desde entonces entendí que abrazar la cruz no es una carga que se soporta, sino un amor que se responde — San Francisco de Asís",
+            "Nada te turbe, nada te espante; quien a Dios tiene nada le falta: solo Dios basta. Estas palabras nacieron contemplando a Cristo cargado con la cruz sin perder jamás la paz interior, y en ellas quise enseñar a mis hijas a llevar también las suyas — Santa Teresa de Jesús"
         ]
     },
     "M10": {
         "nombre": "La Crucifixión y Muerte de Jesús",
         "header": "5to Misterio Doloroso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "Jesús muere en la cruz por nuestros pecados. Sus últimas palabras 'Todo está cumplido' sellan nuestra redención. Contemplemos el amor infinito de Dios manifestado en la cruz.",
             "Desde la cruz, Jesús nos da a María como madre: 'Mujer, ahí tienes a tu hijo.' Acojamos a María en nuestra vida como Juan la acogió en la suya."
+        ],
+        "reflexiones_profundas": [
+            "La piedad cristiana ha recogido de los cuatro evangelios las Siete Palabras que Jesús pronunció desde la Cruz, y las medita tradicionalmente cada Viernes Santo entre el mediodía y las tres de la tarde. Cada una de ellas es un testamento de amor dejado a la humanidad.",
+            "\"El velo del Templo se rasgó en dos, de arriba abajo\" (Mt 27,51) en el instante en que Jesús expiró. Aquel gesto anunciaba que el acceso a Dios, antes reservado y velado, quedaba abierto para siempre a todo el que se acerque por Cristo.",
+            "Tras la muerte del Señor, la Iglesia entra en el silencio del Sábado Santo, sin celebrar la Eucaristía, como en espera junto al sepulcro. Que también nosotros sepamos guardar, alguna vez, un silencio semejante ante el misterio de la Cruz.",
+            "Oh difunto Jesús mío, beso enternecido esa Cruz en la que por mí has muerto. Yo tenía merecida una mala muerte por mis pecados, mas la tuya es toda mi esperanza — San Alfonso María de Ligorio",
+            "Dos años antes de morir recibí en mi propio cuerpo las llagas de Cristo crucificado, para que ni un instante más pudiera olvidar lo que le costó salvarme. Que la contemplación de sus cinco llagas encienda también en vosotros ese mismo amor — San Francisco de Asís",
+            "Del costado abierto de Jesús en la Cruz brotaron sangre y agua, fuente de la Divina Misericordia para el mundo entero. Aquel que se acerque a esa fuente con confianza, por muy grande que sea su pecado, no será rechazado — Santa Faustina Kowalska"
         ]
     },
     "M11": {
         "nombre": "La Resurrección de Jesús",
         "header": "1er Misterio Glorioso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "Cristo ha resucitado, venciendo la muerte y el pecado. Su resurrección es nuestra esperanza de vida eterna. Aleluya, el Señor ha resucitado verdaderamente.",
             "Las mujeres encuentran el sepulcro vacío y el ángel anuncia: 'No está aquí, ha resucitado.' Que nuestra fe en Cristo resucitado transforme nuestra vida."
+        ],
+        "reflexiones_profundas": [
+            "\"Este es el día en que actuó el Señor: sea nuestra alegría y nuestro gozo\" (Sal 117,24), canta la liturgia pascual. Ninguna otra fiesta cristiana iguala en júbilo a esta mañana en que la muerte quedó definitivamente vencida.",
+            "San Juan anota un detalle conmovedor: al entrar en el sepulcro vacío vio \"el sudario, no junto a los lienzos, sino enrollado en un lugar aparte\" (Jn 20,7). No hubo prisa ni desorden en la Resurrección, sino la serena victoria del Señor de la vida.",
+            "\"Si Cristo no resucitó, vana es nuestra fe\" (1 Cor 15,14), escribe san Pablo. Toda la fe cristiana descansa sobre este misterio; que nuestra Pascua de cada domingo renueve en nosotros la certeza gozosa de que la vida, y no la muerte, tiene la última palabra.",
+            "Resucitó para darnos la esperanza de que resucitará también lo que en nosotros muere, y así la muerte ya no nos deje sin esperanza, como si toda nuestra vida terminara en el sepulcro — San Agustín de Hipona",
+            "La resurrección de Cristo es la causa y el modelo de la nuestra: así como Él resucitó glorioso, así también nuestros cuerpos resucitarán un día, transformados, para participar de esa misma gloria — Santo Tomás de Aquino",
+            "Quiero pasar mi cielo haciendo el bien en la tierra. La certeza de la Resurrección no me aleja de este mundo, sino que me impulsa a amar más, sabiendo que nada de lo que se hace por amor se pierde jamás — Santa Teresita del Niño Jesús"
         ]
     },
     "M12": {
         "nombre": "La Ascensión de Jesús al Cielo",
         "header": "2do Misterio Glorioso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "Jesús asciende al cielo ante los ojos de sus discípulos. Nos prepara un lugar en la casa del Padre. Vivamos con la mirada puesta en el cielo, nuestra verdadera patria.",
             "Antes de ascender, Jesús promete: 'Estaré con ustedes todos los días hasta el fin del mundo.' Confiemos en su presencia constante en nuestra vida."
+        ],
+        "reflexiones_profundas": [
+            "Antes de subir a los cielos, Jesús promete: \"No os dejaré huérfanos, volveré a vosotros\" (Jn 14,18). La Ascensión no es una despedida triste, sino el paso a una presencia nueva, ya no limitada por el espacio, sino derramada sobre toda la Iglesia.",
+            "Mientras los apóstoles miran fijamente al cielo, dos ángeles les preguntan: \"¿Por qué estáis ahí mirando al cielo?\" (Hch 1,11), y los envían a anunciar el Evangelio. Contemplar este misterio no debe paralizarnos, sino impulsarnos a la misión.",
+            "Cuarenta días permaneció Jesús resucitado entre los suyos antes de ascender, el mismo número que evoca los cuarenta años del Éxodo y los cuarenta días de Moisés y Elías en el monte: el tiempo bíblico de la preparación antes del encuentro definitivo con Dios.",
+            "Hoy nuestro Señor Jesucristo ha subido al cielo; suba también con Él nuestro corazón. Pues del mismo modo que Él ascendió sin alejarse de nosotros, también nosotros, mientras vivimos en la tierra, ya estamos con Él en el cielo por la esperanza — San Agustín de Hipona",
+            "Nuestra verdadera patria está en el cielo, y hacia allá debe volar sin cesar el corazón, aunque los pies permanezcan todavía caminando sobre la tierra. Vivir con el corazón puesto en lo alto es el secreto de la paz del alma — San Francisco de Sales",
+            "Aunque Jesús subió al cielo con su cuerpo glorioso, no nos dejó solos: permanece con nosotros, oculto pero real, en el Santísimo Sacramento del altar, hasta el fin de los siglos — San Alfonso María de Ligorio"
         ]
     },
     "M13": {
         "nombre": "La Venida del Espíritu Santo",
         "header": "3er Misterio Glorioso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "El Espíritu Santo desciende sobre María y los apóstoles en Pentecostés. Reciben fortaleza y sabiduría para proclamar el Evangelio. Invoquemos al Espíritu Santo en nuestra vida.",
             "El Espíritu Santo transforma a los apóstoles de temerosos en valientes testigos de Cristo. Pidamos la gracia de ser testigos audaces de nuestra fe."
+        ],
+        "reflexiones_profundas": [
+            "María estaba en medio de los apóstoles, orando con ellos en el Cenáculo mientras esperaban al Espíritu Santo (Hch 1,14). Aquellos nueve días de oración son, según la tradición, la primera novena de la historia cristiana.",
+            "Lenguas como de fuego se posaron sobre cada uno de los apóstoles, y el don de hablar en lenguas revirtió, según los Padres de la Iglesia, la distribución de Babel: donde el pecado dividió, el Espíritu vuelve a unir a los pueblos.",
+            "Cada cristiano recibe en la Confirmación este mismo Espíritu que descendió en Pentecostés, sellado como testigo de Cristo ante el mundo. Pidamos hoy una renovación de los dones que recibimos aquel día de nuestra propia vida.",
+            "El Espíritu Santo, al encontrar a María en el mundo, quiso servirse siempre de ella para obrar sus mayores maravillas: la formó en su seno para engendrar a Jesús, y la puso en medio de los apóstoles para hacer descender el fuego de Pentecostés — San Luis María de Montfort",
+            "Los siete dones del Espíritu Santo son como siete ríos que descienden de una misma fuente para regar el alma: sabiduría, entendimiento, consejo, fortaleza, ciencia, piedad y temor de Dios. Pidamos hoy que ninguno de ellos falte en nuestra vida — San Buenaventura",
+            "En lo más íntimo del alma, en esa morada donde habita la Santísima Trinidad, es donde el Espíritu Santo obra sus mayores maravillas, sin ruido y sin fuego visible, pero con una fuerza que transforma por completo al que se deja llevar — Santa Teresa de Jesús"
         ]
     },
     "M14": {
         "nombre": "La Asunción de María",
         "header": "4to Misterio Glorioso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "María es asunta al cielo en cuerpo y alma. Dios glorifica a quien fue fiel hasta el final. Que el ejemplo de María nos anime a perseverar en la santidad.",
             "María, preservada del pecado, no conoce la corrupción del sepulcro. Es primicia de nuestra propia resurrección. Esperemos con fe nuestra glorificación futura."
+        ],
+        "reflexiones_profundas": [
+            "En 1950 el Papa Pío XII declaró como dogma de fe que María, terminado el curso de su vida terrena, fue elevada en cuerpo y alma a la gloria celestial. Pero esta verdad, celebrada cada 15 de agosto, era ya una convicción viva de los cristianos desde los primeros siglos.",
+            "La liturgia canta a María como \"toda hermosa\", sin mancha alguna, y por eso ajena también a la corrupción del sepulcro que es fruto del pecado. Quien no conoció la culpa, tampoco había de conocer la disolución de la muerte.",
+            "María es llamada \"primicia\" de la Iglesia, la primera en gozar plenamente de lo que un día esperamos todos los redimidos: la resurrección del cuerpo. Que su Asunción sea para nosotros promesa cierta y no solo consuelo piadoso.",
+            "Convenía que aquella que en el parto conservó íntegra su virginidad, conservase también sin corrupción su cuerpo después de la muerte; convenía que quien llevó en su seno al Creador habitara ya en la morada celestial — San Juan Damasceno",
+            "¿Quién podría dudar de que el Hijo, que tanto honró a su Madre en la tierra, quisiera también coronarla de gloria en el cielo, librándola de la corrupción del sepulcro que Él mismo había vencido para todos nosotros? — San Alfonso María de Ligorio",
+            "Si en algún momento sientes vacilar la tempestad de las tentaciones, mira a la estrella, invoca a María; y ahora, asunta ya a los cielos, no dejes de invocarla como guía segura hasta el puerto de la eterna felicidad — San Bernardo de Claraval"
         ]
     },
     "M15": {
         "nombre": "La Coronación de María como Reina del Cielo",
         "header": "5to Misterio Glorioso",
-        "reflexiones": [
+        "reflexiones_sencillas": [
             "María es coronada Reina del cielo y de la tierra. Desde su trono intercede por nosotros ante su Hijo. Acudamos a ella con confianza en todas nuestras necesidades.",
             "María reina con Cristo en la gloria eterna. Ella es nuestra Madre y Reina. Consagrémonos a su Inmaculado Corazón y pongamos nuestra vida bajo su protección maternal."
+        ],
+        "reflexiones_profundas": [
+            "\"Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra\": con esta antigua antífona, cantada ya en los monasterios medievales, la Iglesia entera saluda a María como Reina al concluir cada Rosario.",
+            "Las Letanías Lauretanas invocan a María con más de veinte títulos de realeza: Reina de los Ángeles, Reina de los Patriarcas, Reina de todos los Santos. Que cada invocación nos recuerde que esta Reina reina sirviendo, como su Hijo lo hizo desde la Cruz.",
+            "La Iglesia no separa nunca la corona de María de la corona de espinas de su Hijo: quien fue Madre de dolores en el Calvario es coronada Reina en el cielo, mostrando que la verdadera grandeza nace siempre del amor que se entrega hasta el final.",
+            "Si Jesús es Rey del universo, también María, su Madre, es Reina; y así como todas las criaturas están sujetas al dominio de Dios, están también sometidas, por su voluntad, al dominio maternal de María — San Alfonso María de Ligorio",
+            "Toda la grandeza de María consiste en haber sido escogida para dar un Hijo a Dios; toda su realeza consiste en seguir dándonos a ese mismo Hijo cada vez que un alma se consagra a ella sin reservas — San Luis María de Montfort",
+            "En ti, Señora, he esperado, y no seré jamás confundido; pues nadie puede entrar en el Cielo si no es por ti, que eres la puerta por la que Dios mismo quiso descender a nosotros — San Buenaventura"
         ]
     }
 }

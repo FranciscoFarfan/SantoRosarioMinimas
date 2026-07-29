@@ -1,4 +1,6 @@
 import flet as ft
+import flet_audio as fa
+from flet_audio import AudioState
 
 import json
 import random
@@ -49,11 +51,15 @@ class RosarioApp:
         if self.audio in self.page.overlay:
             self.page.overlay.remove(self.audio)
         
-        self.audio = ft.Audio(
+        # FIX: ft.Audio → fa.Audio (paquete flet-audio)
+        # FIX: on_state_changed → on_state_change
+        # FIX: on_position_changed → on_position_change
+        # FIX: on_duration_changed → on_duration_change
+        self.audio = fa.Audio(
             autoplay=False,
-            on_state_changed=self.on_audio_state_changed,
-            on_position_changed=self.on_position_changed,
-            on_duration_changed=self.on_duration_changed,
+            on_state_change=self.on_audio_state_changed,
+            on_position_change=self.on_position_changed,
+            on_duration_change=self.on_duration_changed,
             playback_rate=self.playback_speed,
         )
         self.page.overlay.append(self.audio)
@@ -73,6 +79,13 @@ class RosarioApp:
     def show_debug_dialog(self, e):
         files_str = self.list_files(str(self.base_path))
         
+        # FIX: page.open/close no existen en 0.86 → usar dlg.open + page.overlay
+        def close_dlg(x):
+            dlg.open = False
+            if dlg in self.page.overlay:
+                self.page.overlay.remove(dlg)
+            self.page.update()
+
         dlg = ft.AlertDialog(
             title=ft.Text("Debug Files"),
             content=ft.Column([
@@ -85,10 +98,16 @@ class RosarioApp:
                 )
             ], scroll=ft.ScrollMode.AUTO, height=400),
             actions=[
-                ft.TextButton("Close", on_click=lambda x: self.page.close(dlg))
+                ft.TextButton("Close", on_click=close_dlg)
             ],
         )
-        self.page.open(dlg)
+        self.page.overlay.append(dlg)
+        dlg.open = True
+        self.page.update()
+
+    # FIX: launch_url ahora es async → método dedicado async
+    async def open_url(self, e):
+        await self.page.launch_url("https://franciscofarfan.github.io/FSSPX/Rosario/Rosario.html")
 
     def setup_ui(self):
         """Setup the main UI"""
@@ -100,7 +119,7 @@ class RosarioApp:
                     src="./Fatima.jpg",
                     width=200,
                     height=200,
-                    fit=ft.ImageFit.COVER,
+                    fit=ft.BoxFit.COVER,
                     border_radius=20,
                 ),
                 ft.Divider(color=ft.Colors.WHITE24),
@@ -183,7 +202,8 @@ class RosarioApp:
                 ft.IconButton(
                     icon=ft.Icons.INFO_OUTLINE,
                     icon_color=ft.Colors.WHITE,
-                    on_click=lambda _: self.page.launch_url("https://franciscofarfan.github.io/FSSPX/Rosario/Rosario.html"),
+                    # FIX: launch_url es async → usar método async dedicado
+                    on_click=self.open_url,
                     tooltip="Acerca de",
                 ),
             ],
@@ -198,7 +218,7 @@ class RosarioApp:
             src="",
             width=300,
             height=300,
-            fit=ft.ImageFit.COVER,
+            fit=ft.BoxFit.COVER,
             border_radius=10,
         )
         
@@ -224,21 +244,22 @@ class RosarioApp:
         
         self.time_text = ft.Text("0:00 / 0:00", size=12)
 
+        # FIX: ft.dropdown.Option → ft.DropdownOption
         self.speed_dropdown = ft.Dropdown(
             width=100,
             value="1.0x",
             options=[
-                ft.dropdown.Option("0.85x"),
-                ft.dropdown.Option("0.90x"),
-                ft.dropdown.Option("0.95x"),
-                ft.dropdown.Option("1.0x"),
-                ft.dropdown.Option("1.1"),
-                ft.dropdown.Option("1.2x"),
-                ft.dropdown.Option("1.3x"),
-                ft.dropdown.Option("1.4x"),
-                ft.dropdown.Option("1.5x"),
+                ft.DropdownOption(key="0.85x"),
+                ft.DropdownOption(key="0.90x"),
+                ft.DropdownOption(key="0.95x"),
+                ft.DropdownOption(key="1.0x"),
+                ft.DropdownOption(key="1.1"),
+                ft.DropdownOption(key="1.2x"),
+                ft.DropdownOption(key="1.3x"),
+                ft.DropdownOption(key="1.4x"),
+                ft.DropdownOption(key="1.5x"),
             ],
-            on_change=self.change_playback_speed,
+            on_select=self.change_playback_speed,
             text_size=12,
             content_padding=5,
             filled=True,
@@ -320,7 +341,7 @@ class RosarioApp:
                         blur_radius=15,
                         color=ft.Colors.BLUE_GREY_100,
                         offset=ft.Offset(0, 0),
-                        blur_style=ft.ShadowBlurStyle.OUTER,
+                        blur_style=ft.BlurStyle.OUTER,
                     ),
                 )
             ],
@@ -335,7 +356,7 @@ class RosarioApp:
             controls=[
                 ft.Image(
                     src="./cielo.jpg",
-                    fit=ft.ImageFit.FIT_WIDTH,
+                    fit=ft.BoxFit.FIT_WIDTH,
                     opacity=1.0,
                     left=0,
                     right=0,
@@ -343,12 +364,12 @@ class RosarioApp:
                 ),
                 ft.Container(
                     content=self.main_menu,
-                    alignment=ft.alignment.center,
+                    alignment=ft.Alignment.CENTER,
                     padding=20,
                 ),
                 ft.Container(
                     content=self.player_view,
-                    alignment=ft.alignment.center,
+                    alignment=ft.Alignment.CENTER,
                     padding=20,
                     visible=False,
                 ),
@@ -482,29 +503,34 @@ class RosarioApp:
             "type": "final"
         })
     
-    def start_daily_rosary(self, e):
+    # FIX: async porque llama a start_playback → load_track → audio.release()
+    async def start_daily_rosary(self, e):
         """Start the rosary for today"""
         rosary_type = self.get_mysteries_for_day()
         self.build_playlist(rosary_type)
-        self.start_playback()
+        await self.start_playback()
     
     
-    def start_rosary_gozosos(self, e):
+    # FIX: async porque llama a start_playback
+    async def start_rosary_gozosos(self, e):
         """Start Gozosos rosary"""
         self.build_playlist("gozosos")
-        self.start_playback()
+        await self.start_playback()
     
-    def start_rosary_dolorosos(self, e):
+    # FIX: async porque llama a start_playback
+    async def start_rosary_dolorosos(self, e):
         """Start Dolorosos rosary"""
         self.build_playlist("dolorosos")
-        self.start_playback()
+        await self.start_playback()
     
-    def start_rosary_gloriosos(self, e):
+    # FIX: async porque llama a start_playback
+    async def start_rosary_gloriosos(self, e):
         """Start Gloriosos rosary"""
         self.build_playlist("gloriosos")
-        self.start_playback()
+        await self.start_playback()
     
-    def play_individual_mystery(self, e):
+    # FIX: async porque llama a start_playback
+    async def play_individual_mystery(self, e):
         """Play the individual mystery M.mp3"""
         mystery_data = self.reflections_data["M"]
         self.playlist = [{
@@ -515,22 +541,22 @@ class RosarioApp:
             "reflection": random.choice(mystery_data["reflexiones"]),
             "type": "misterio"
         }]
-        self.start_playback()
+        await self.start_playback()
     
-    def start_playback(self):
+    # FIX: async porque llama a load_track que llama audio.release()
+    async def start_playback(self):
         """Start playing the playlist"""
         if not self.playlist:
             return
         
-        # Initialize fresh audio control
-        self.init_audio()
-        
+        # load_track crea el control de audio con src incluido,
+        # no se necesita init_audio() previo (causaba "Unknown control audio" sin src)
         self.current_track_index = 0
         self.show_player()
-        self.load_track(0)
-        # No need to call play(), load_track handles it with autoplay
+        await self.load_track(0)
     
-    def load_track(self, index):
+    # FIX: async porque llama audio.release() (método async en 0.86)
+    async def load_track(self, index):
         """Load a track from the playlist"""
         if 0 <= index < len(self.playlist):
             track = self.playlist[index]
@@ -539,17 +565,22 @@ class RosarioApp:
             # Remove existing audio from overlay if present
             if self.audio and self.audio in self.page.overlay:
                 self.page.overlay.remove(self.audio)
-                self.audio.release()
+                # FIX: release() es async en 0.86
+                await self.audio.release()
             
             # Create new audio instance for the track
             audio_file = f"{self.audio_path}/{track['audio']}"
-            self.audio = ft.Audio(
+            # FIX: ft.Audio → fa.Audio (flet-audio)
+            # FIX: on_state_changed → on_state_change
+            # FIX: on_position_changed → on_position_change
+            # FIX: on_duration_changed → on_duration_change
+            self.audio = fa.Audio(
                 src=audio_file,
                 autoplay=True,
                 playback_rate=self.playback_speed,
-                on_state_changed=self.on_audio_state_changed,
-                on_position_changed=self.on_position_changed,
-                on_duration_changed=self.on_duration_changed,
+                on_state_change=self.on_audio_state_changed,
+                on_position_change=self.on_position_changed,
+                on_duration_change=self.on_duration_changed,
             )
             self.page.overlay.append(self.audio)
             self.page.update()
@@ -574,12 +605,15 @@ class RosarioApp:
         self.layout.controls[2].visible = True  # Player View Container
         self.page.update()
     
-    def back_to_menu(self, e):
+    # FIX: async porque llama audio.pause() y audio.release() (ambos async en 0.86)
+    async def back_to_menu(self, e):
         """Go back to the main menu"""
         if self.audio:
             if self.is_playing:
-                self.audio.pause()
-            self.audio.release()
+                # FIX: await en métodos async de Audio
+                await self.audio.pause()
+            # FIX: await en métodos async de Audio
+            await self.audio.release()
             if self.audio in self.page.overlay:
                 self.page.overlay.remove(self.audio)
             self.audio = None
@@ -593,63 +627,77 @@ class RosarioApp:
         self.layout.controls[1].visible = True  # Main Menu
         self.page.update()
     
-    def toggle_play_pause(self, e):
+    # FIX: async porque llama audio.pause() y audio.resume() (ambos async en 0.86)
+    async def toggle_play_pause(self, e):
         """Toggle play/pause"""
         if self.is_playing:
-            self.audio.pause()
+            # FIX: await en métodos async de Audio
+            await self.audio.pause()
         else:
-            self.audio.resume()
+            # FIX: await en métodos async de Audio
+            await self.audio.resume()
     
-    def previous_track(self, e):
+    # FIX: async porque llama load_track (async)
+    async def previous_track(self, e):
         """Go to previous track"""
         if self.current_track_index > 0:
-            self.load_track(self.current_track_index - 1)
+            await self.load_track(self.current_track_index - 1)
     
-    def next_track(self, e):
+    # FIX: async porque llama load_track y back_to_menu (ambos async)
+    async def next_track(self, e):
         """Go to next track"""
         if self.current_track_index < len(self.playlist) - 1:
-            self.load_track(self.current_track_index + 1)
+            await self.load_track(self.current_track_index + 1)
         else:
             # End of playlist
-            self.back_to_menu(None)
+            await self.back_to_menu(None)
     
-    def on_audio_state_changed(self, e):
+    # FIX: async porque puede llamar next_track (async)
+    # FIX: e.data → e.state con AudioState enum
+    async def on_audio_state_changed(self, e):
         """Handle audio state changes"""
-        if e.data == "playing":
+        # FIX: Antes era e.data == "playing" / "paused" / "completed"
+        # Ahora es e.state == AudioState.PLAYING / PAUSED / COMPLETED
+        if e.state == AudioState.PLAYING:
             self.is_playing = True
             self.play_pause_button.icon = ft.Icons.PAUSE
-        elif e.data == "paused":
+        elif e.state == AudioState.PAUSED:
             self.is_playing = False
             self.play_pause_button.icon = ft.Icons.PLAY_ARROW
-        elif e.data == "completed":
+        elif e.state == AudioState.COMPLETED:
             # Auto-advance to next track
-            self.next_track(None)
+            await self.next_track(None)
         
         self.page.update()
     
     def on_position_changed(self, e):
         """Handle position changes"""
         if not self.is_seeking:
-            self.current_position = int(e.data)
+            # FIX: Antes era int(e.data); ahora es e.position (int en ms)
+            self.current_position = e.position
             if self.current_duration > 0:
                 self.position_slider.value = (self.current_position / self.current_duration) * 100
             self.update_time_display()
     
     def on_duration_changed(self, e):
         """Handle duration changes"""
-        self.current_duration = int(e.data)
+        # FIX: Antes era int(e.data); ahora es e.duration (ft.Duration)
+        # Convertimos a milisegundos para mantener compatibilidad con el resto del código
+        self.current_duration = e.duration.in_milliseconds if e.duration else 0
         self.update_time_display()
     
     def on_slider_change(self, e):
         """Handle slider drag"""
         self.is_seeking = True
     
-    def on_slider_change_end(self, e):
+    # FIX: async porque llama audio.seek() (async en 0.86)
+    async def on_slider_change_end(self, e):
         """Handle slider release"""
         self.is_seeking = False
         if self.current_duration > 0:
             new_position = int((e.control.value / 100) * self.current_duration)
-            self.audio.seek(new_position)
+            # FIX: await en seek() que es async en 0.86
+            await self.audio.seek(new_position)
     
     def update_time_display(self):
         """Update the time display"""
@@ -673,10 +721,13 @@ class RosarioApp:
             self.playback_speed = new_speed
             if self.audio:
                 self.audio.playback_rate = new_speed
-                self.audio.update()
+                # FIX: usar page.update() en lugar de audio.update()
+                # Audio es un Service en 0.86 y sus cambios se propagan vía page
+                self.page.update()
         except ValueError:
             pass
     
+
 
 
 
@@ -685,4 +736,4 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(target=main, assets_dir="assets")
+    ft.run(main, assets_dir="assets")
